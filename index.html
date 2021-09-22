@@ -75,19 +75,7 @@ img {
     display: none !important;
   }
   .hide-button{
-    display: none !important;
-    display: block;
-    background: #ccc;
-    height: 400px;
-    width: 100%;
-    border-radius: 15px;
-    display: grid;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    opacity: 0.7;
-    transition: all 0.3s ease;
+   
   }
   img{
     height: 80vh;
@@ -105,12 +93,27 @@ img {
     margin-right: auto;
     text-align: center;
   }
+  .form{
+    display: none !important;
+    display: block;
+    background: #ccc;
+    height: 400px;
+    width: 100%;
+    border-radius: 15px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+    transition: all 0.3s ease; 
+  }
     
 </style>
 </head>
 <body>
    <div class="hide-button" id="hide-button"><a class="load-image" href="https://assets.codepen.io/14179/musab-al-rawahi-KsfH7IYFn98-unsplash.jpg">Hey, Saumya !, Please Click Here!!</a></div>
-    <div id="form">
+    <div id="form" class="form">
       <label for="fname">Enter Code:</label>
       <input type="text" id="lname" name="lname"><br><br>
       <input type="submit" id="submit" value="Submit">
@@ -159,7 +162,6 @@ document.querySelectorAll(".load-image").forEach((item) => {
     else{
      alert("Incorrect code, You are not authorized to use it.") 
     }
-    event.target.remove();
   });
 });
   
