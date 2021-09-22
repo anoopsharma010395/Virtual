@@ -76,6 +76,18 @@ img {
   }
   .hide-button{
     display: none !important;
+    display: block;
+    background: #ccc;
+    height: 400px;
+    width: 100%;
+    border-radius: 15px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+    transition: all 0.3s ease;
   }
   img{
     height: 80vh;
@@ -140,7 +152,7 @@ document.querySelectorAll(".load-image").forEach((item) => {
   document.querySelectorAll("#submit").forEach((item) => {
   item.addEventListener("click", (event) => {
     event.preventDefault();
-    if(document.getElementById('lname').value == "SaAn" || document.getElementById('input').value == "AnSa"){
+    if(document.getElementById('lname').value == "SaAn" || document.getElementById('lname').value == "AnSa"){
       document.getElementById('hide-button').classList= [''];
       document.getElementById('form').classList= ['hide-button'];
     }
