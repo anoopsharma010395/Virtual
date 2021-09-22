@@ -68,15 +68,14 @@ img {
   &:hover {
     opacity: 1;
   }
-  #carouselExampleControls{
+  .hide{
     display:none;
   }
 </style>
 </head>
 <body>
-    <button type="button" class="btn btn-outline-primary">Primary</button>
-    
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <a class="load-image" href="https://assets.codepen.io/14179/musab-al-rawahi-KsfH7IYFn98-unsplash.jpg">Photograph of hot air balloons by Musab Al Rawahi. 144kb</a>
+    <div id="carouselExampleControls" class="hide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="./pics/rose-1.jpeg" class="d-block w-100" alt="...">
@@ -104,10 +103,10 @@ img {
     
     
 <script>
-document.querySelectorAll("button").forEach((item) => {
+document.querySelectorAll(".load-image").forEach((item) => {
   item.addEventListener("click", (event) => {
     event.preventDefault();
-    document.getElementById('carouselExampleControls').display= 'block';
+    document.getElementById('carouselExampleControls').stlyle.classList= ['carousel', 'slide'];
     event.target.remove();
   });
 });
