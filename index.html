@@ -74,6 +74,9 @@ img {
    .hide{
     display: none !important;
   }
+  .hide-button{
+    display: none !important;
+  }
   img{
     height: 80vh;
     max-width: 424px;
@@ -94,9 +97,13 @@ img {
 </style>
 </head>
 <body>
-   <a class="load-image" href="https://assets.codepen.io/14179/musab-al-rawahi-KsfH7IYFn98-unsplash.jpg">Hey, Saumya !, Please Click Here!!</a>
+   <div class="hide-button" id="hide-button"><a class="load-image" href="https://assets.codepen.io/14179/musab-al-rawahi-KsfH7IYFn98-unsplash.jpg">Hey, Saumya !, Please Click Here!!</a></div>
+    <div id="form">
+      <label for="fname">Enter Code:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="submit" id="submit" value="Submit">
+    </div>
     <div class="hide" id="hide">
-    
     <div class="w3-content w3-display-container" style="">
       <img class="mySlides" src="./pics/rose-0.jpeg" width="500" height="900">
       <img class="mySlides" src="./pics/rose-1.jpeg" width="500" height="900">
@@ -126,6 +133,20 @@ document.querySelectorAll(".load-image").forEach((item) => {
   item.addEventListener("click", (event) => {
     event.preventDefault();
     document.getElementById('hide').classList= [''];
+    event.target.remove();
+  });
+});
+ 
+  document.querySelectorAll("#submit").forEach((item) => {
+  item.addEventListener("click", (event) => {
+    event.preventDefault();
+    if(document.getElementById('lname').value == "SaAn" || document.getElementById('input').value == "AnSa"){
+      document.getElementById('hide-button').classList= [''];
+      document.getElementById('form').classList= ['hide-button'];
+    }
+    else{
+     alert("Incorrect code, You are not authorized to use it.") 
+    }
     event.target.remove();
   });
 });
